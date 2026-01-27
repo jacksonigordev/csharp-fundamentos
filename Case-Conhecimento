@@ -1,0 +1,68 @@
+using System.ComponentModel;
+using System.Runtime.ConstrainedExecution;
+
+namespace Case
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+        // Crie um programa que peça ao usuário para digitar um número e,
+        // conforme o número informado, mostre se o dia é útil ou final de semana.
+
+
+            inicio:
+            Console.WriteLine("Digite um número de 1 a 7 para ver o dia da semana e se é dia útil ou fim de semana." );
+            Console.WriteLine("*********************************");
+            Thread.Sleep(2000);
+            
+            Console.WriteLine("Digite (1) para Segunda-Feira  **");
+            Console.WriteLine("Digite (2) para Terça-Feira    **");
+            Console.WriteLine("Digite (3) para Quarta-Feira   **");
+            Console.WriteLine("Digite (4) para Quinta-Feira   **");
+            Console.WriteLine("Digite (5) para Sexta-Feira    **");
+            Console.WriteLine("Digite (6) para Sábado         **");
+            Console.WriteLine("Digite (7) para Domingo        **");
+            Console.WriteLine("*********************************");
+            
+            int dia = int.Parse(Console.ReadLine());
+            
+            switch (dia)
+            {
+                case 1:
+                    Console.WriteLine("Segunda-Feira é dia útil");
+                    break;
+                case 2:
+                    Console.WriteLine("Terça-Feira é dia útil:");
+                    break;
+                case 3:
+                    Console.WriteLine("Quarta-Feira é dia útil");
+                    break;
+                case 4:
+                    Console.WriteLine("Quinta-Feira é dia útil");
+                    break;
+                case 5: 
+                    Console.WriteLine("Sexta-Feira é dia útil");
+                    break;
+                case 6:
+                    Console.WriteLine("Sábado não é um dia útil e sim um final de semana");
+                    break;
+                case 7:
+                    Console.WriteLine("Domingo não é um dia útil e sim um final de semana");
+                    break;
+                default:
+                    Console.WriteLine("Você digitou um número invalido, tente novamente.");
+                    Thread.Sleep(3000);
+                    Console.Clear();
+
+                    goto inicio;
+                    
+            }
+            
+
+            
+            
+
+        }
+    }
+}
