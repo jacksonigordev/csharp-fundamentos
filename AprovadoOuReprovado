@@ -1,0 +1,39 @@
+namespace AprovadoOuReprovado
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Olá aluno, parabéns pelo ano letivo!");
+            Console.WriteLine("Neste pragrama nós iremos calcular a média das duas útimas notas finais sua.");
+            Console.WriteLine("Digite qualquer tecla para continuar.");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("Digite o seu nome completo: ");
+            string nome = Console.ReadLine();
+
+            Console.WriteLine("Digite qual ano letivo do ensino médio você estava cursando (7, 8 ou 9ª)");
+            int ano = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a primeira nota: ");
+            double nota1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite a Segunda nota: ");
+            double nota2 = double.Parse(Console.ReadLine());
+
+            double notaFull = (nota1 + nota2) / 2;
+            int nota = 7;
+
+            if (notaFull >= 7)
+                Console.WriteLine("Parabéns " + nome + " a média das suas nota foi igual ou a cima de 7 e você foi APROVADO!");
+            else
+            {
+                Console.WriteLine(nome + "," + " infelizmente sua nota foi menor doque " + nota + " e você terá que cursar novamente o " + ano + "ª," + " ano que vem!");
+            }
+
+
+            Console.ReadKey();
+        }
+    }
+}
