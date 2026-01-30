@@ -1,0 +1,47 @@
+using System.Diagnostics;
+using System.Security.Cryptography;
+
+namespace TesteJunior
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Exercicio.            
+            //Peça para o usuário digitar os 5 números.
+            //Mostre:
+            //Todos os números ditados.
+            //A soma deles.
+            //A média.  
+            //*************************************************
+
+            //Peça para o usuário digitar os 5 números.
+            Console.WriteLine("Exercicio dos 5 números inteiros. Imprima, soma e qual a média dos 5. (Ex: 5,10,85,63,25)");
+            Console.WriteLine("Digite o primeiro número: ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o terceiro ´número: ");
+            int num3 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o quarto número: ");
+            int num4 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o quinto e ultimo número: ");
+            int num5 = int.Parse(Console.ReadLine());
+
+            //A soma deles.
+            int soma = num1 + num2 + num3 + num4 + num5;
+            Console.WriteLine("A soma desses 5 números é exatos: " + soma);
+
+            //A média.
+
+            Console.WriteLine("A média esses 5 números somados é: " + soma / 2);
+
+
+
+        }
+    }
+}
