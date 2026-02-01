@@ -1,0 +1,45 @@
+using System.Diagnostics;
+using System.Security.Cryptography;
+
+namespace TesteJunior
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Exercicio.
+            //Crie um array de 5 números inteiros.
+            //Peça para o usuário digitar os 5 números.
+            //Mostre:
+            //Todos os números ditados.
+            //A soma deles.
+            //A média.  
+            //*************************************************
+
+            int[] numeros = new int[5];
+            int soma = 0;
+
+            // Pedir os números
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write("Digite um número: ");
+                numeros[i] = Convert.ToInt32(Console.ReadLine());
+                soma = soma + numeros[i];
+            }
+
+            // Mostrar os números
+            Console.WriteLine("\nNúmeros digitados:");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+
+            // Calcular média
+            double media = soma / 5.0;
+
+            Console.WriteLine($"\nSoma: {soma}");
+            Console.WriteLine($"Média: {media}");
+
+        }
+    }
+}
