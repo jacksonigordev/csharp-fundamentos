@@ -1,0 +1,57 @@
+namespace ConvertPar
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite a sua idade: ");
+            int idade = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(idade + " anos de idade.");
+
+            Console.WriteLine("Qual é o seu número inteiro favorito?");
+            int numFavorito = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("O seu número inteiro favorito é: " + numFavorito + "!");
+
+            Console.WriteLine("Digite um número inteiro: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite um segundo número inteiro:");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("A soma dos números é: " + (num1 + num2));
+            Console.WriteLine("A média desses números são: " + (num1 / num2));
+
+            Console.WriteLine("Vamos descobrir se o seu número é par ou impar.");
+            Console.WriteLine("Digite o número: ");
+            int numero = Convert.ToInt32(Console.ReadLine());   
+            if (numero % 2 == 0)
+            {
+              Console.WriteLine("Seu número é par.");
+            }
+            else
+            {
+              Console.WriteLine("Seu número é impar.");
+            }
+
+            Console.WriteLine("Mostre 10 números e diga se cada um deles é impar ou par.");
+            
+            for (int numeros = 1; numeros <= 10; numeros++)
+            {
+                if (numeros % 2 == 0)
+                {
+                    Console.WriteLine(numeros + " Número par");
+                }
+                else
+                {
+                    Console.WriteLine(numeros + " Número impar");
+                }
+            }
+
+
+
+
+
+            Console.ReadKey();
+        }    
+    }
+}
