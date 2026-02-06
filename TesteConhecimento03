@@ -1,0 +1,66 @@
+namespace Trin
+{
+    public class Program
+    {
+        public static void Main()
+        {
+            bool jogar = true;
+
+            while (jogar)
+            {
+                //#TesteDeConhecimentoCleanCode
+                int vida = 100;
+                Random rnd = new Random();
+
+                Console.Clear();
+                Console.WriteLine("************************");
+                Console.WriteLine("***TESTE CONHECIMENTO***");
+                Console.WriteLine("************************");
+                Console.WriteLine("");
+                Console.WriteLine("JOGO INICIADO!");
+                Console.WriteLine($"Vida inicial: {vida}");
+                Console.WriteLine("---------------------");
+
+                while (vida > 0)
+                {
+                    Console.WriteLine("Pressione ENTER para receber um hit...");
+                    Console.ReadLine();
+
+                    int chanceCritico = rnd.Next(1, 6);
+
+                    if (chanceCritico == 5)
+                    {
+                        vida = 0;
+                        Console.WriteLine("HIT CRÍTICO!");
+                    }
+                    else
+                    {
+                        vida -= 20;
+                        Console.WriteLine("Hit normal (-20)");
+                    }
+
+                    if (vida > 0)
+                    {
+                        Console.WriteLine($"Vida atual: {vida}");
+                        Console.WriteLine("---------------------");
+                    }
+                }
+
+                Console.WriteLine("VOCÊ MORREU!");
+                Console.WriteLine("GAME OVER");
+
+                Console.WriteLine("Quer jogar de novo? (s/n ou sim/nao)");
+                string resposta = Console.ReadLine().ToLower();
+
+                if (resposta == "s" || resposta == "sim")
+                {
+                    jogar = true;
+                }
+                else if (resposta != "s" || resposta != "sim")
+                    jogar = false;
+                }
+
+            Console.WriteLine("Jogo encerrado.");
+        }
+    }
+}
