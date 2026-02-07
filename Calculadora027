@@ -1,0 +1,37 @@
+namespace Trin;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Calculadora Porreta");
+
+        Console.WriteLine("Digite o primeiro número: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());      
+
+        Console.WriteLine("Digite o segundo número: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Escolha o operador lógico: (+)(-)(*)(/)");
+        string operador = Console.ReadLine();
+
+        if (operador == "+")
+        {
+            Console.WriteLine($"A soma dos números são: {(num1 + num2)}");
+        }
+       else if (operador == "-")
+        {
+            Console.WriteLine($"A Subtração dos números são: {(num1 - num2)}");
+        }
+       else if (operador == "*")
+        {
+            Console.WriteLine($"A multiplicação dos números são: {(num1 * num2)}");
+        }
+        else if (operador == "/")
+        {
+            Console.WriteLine($"A divisão dos números são: {(num1 / num2)}");
+        }
+
+        Console.ReadKey();
+    }
+}
