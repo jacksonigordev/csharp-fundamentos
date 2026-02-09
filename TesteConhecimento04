@@ -1,0 +1,109 @@
+using System.Net.Mail;
+using System.Threading.Channels;
+
+namespace Trin;
+
+public class Program
+{
+    public static void Main()
+    {     
+        Console.WriteLine("*******Acelerador de particula humanizado*******");
+        Thread.Sleep(1000);
+        Console.WriteLine("Para iniciar selecione o seu carro.");
+
+        Console.WriteLine("Entre 1 e 5 digite o número do seu carro:");
+        Console.WriteLine("1 - Porshe");
+        Console.WriteLine("2 - Ferrari");
+        Console.WriteLine("3 - Mustang");
+        Console.WriteLine("4 - Subaru");
+        Console.WriteLine("5 - Fiat Uno");
+
+        int carro = Convert.ToInt32(Console.ReadLine());
+        switch (carro)
+        {           
+            case 1:               
+                Console.WriteLine("Você escolheu Porshe");
+                Console.WriteLine("");
+                break;
+
+            case 2: 
+                Console.WriteLine("Você escolheu Ferrari");
+                Console.WriteLine("");
+                break;
+
+            case 3: 
+                Console.WriteLine("Você escolheu Mustang");
+                Console.WriteLine("");
+                break;
+
+            case 4: 
+                Console.WriteLine("Você escolheu Subaru");
+                Console.WriteLine("");
+                break;
+
+            case 5:
+                Console.WriteLine("Você escolheu Fiat Uno");
+                Console.WriteLine("");
+                break;
+        }
+        
+        Console.WriteLine("Deseja acelerar? Digite sim ou não:");
+        string acelerador = Console.ReadLine();
+        if (acelerador == "Sim" || acelerador == "sim" || acelerador == "s")
+        {
+            Console.WriteLine();
+        }       
+        else
+        {
+        Console.WriteLine("Você vai acelerar sim!!");
+        Thread.Sleep(2000);
+        }
+
+            for (int i = 0; i <= 299; i++)
+            {
+                Console.WriteLine("Acelerando uma velocidade de " + i + "KM por hora!");
+                Console.WriteLine("");
+                Thread.Sleep(30);
+            }
+    carin:
+        Console.WriteLine("************************************ Atenção! ***********************************".ToUpper());
+        Thread.Sleep(1000);
+        Console.WriteLine("Você viu um animal na pista, oque fazer? (Freia = Digite 1) ou (Desvia = Digite 2) ");
+        Console.WriteLine("Cuidado existe apenas uma opção VALIDA! ");
+        int desvia = Convert.ToInt32(Console.ReadLine());
+        if (desvia == 1)           
+            {
+            Console.WriteLine("Infelizmente seu carro perdeu o controle, bateu e você não teve um final feliz.");
+            Thread.Sleep(3000);
+            Console.WriteLine("");
+            Console.WriteLine("Calma eu tenho uma mensagem para você!".ToUpper());
+            Thread.Sleep(3000);
+            Console.WriteLine("");
+            goto sms;
+        }
+        else if (desvia == 2)
+            {
+            Console.WriteLine("Com essa velocidade é impossível você freiar, me desculpa seu fim foi trágico.");
+            Thread.Sleep(3000);
+            Console.WriteLine("");
+            Console.WriteLine("Calma eu tenho uma mensagem para você!".ToUpper());
+            Thread.Sleep(3000);
+            Console.WriteLine("");
+            goto sms;
+            }
+        else
+        {
+            Console.WriteLine("Opçao invalida! Aperte qualquer tecla para retornar ao carro.");
+            goto carin;
+        }
+
+    sms:    Console.WriteLine("Na verdade, nem uma das duas opções são validas, velocidade não preenche um vazio.".ToUpper());
+            Console.WriteLine("A vida não vai te dar 2 chances. Aproveite para viver a unica chance que voce tem");
+            Console.WriteLine("cuidando de você, do próximo e de quem você ama. Sempre terá alguem te esperando.");
+
+
+        Console.ReadKey();
+
+        
+    }
+}
