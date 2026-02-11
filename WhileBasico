@@ -1,0 +1,30 @@
+namespace TesteConhecimento;
+
+public class Program
+{
+    public static void Main()
+    {
+
+        //01 - Peça ao usuário para digitar um número
+        //Enquanto o número for diferente de 0:
+        //02 - Mostre na tela o número digitado
+        //03 - Peça outro número
+        //Quando o usuário digitar 0, o programa deve parar e mostrar:
+        //"Programa encerrado"
+
+        Console.WriteLine("Digite um número: ");
+        int numero = int.Parse(Console.ReadLine());
+
+        while (numero != 0)
+        {
+            Console.WriteLine("Você digitou: " + numero);
+
+            Thread.Sleep(500);
+
+            Console.WriteLine("Digite outro número: ");
+
+            numero = int.Parse(Console.ReadLine());                    
+        }
+        Console.WriteLine("Programa encerrado.");
+    }
+}
