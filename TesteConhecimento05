@@ -1,0 +1,57 @@
+namespace Exercicio;
+
+public class Program
+{
+    public static void Main()
+    {
+        int total = 0;
+        int opcao = -1;
+
+        while (opcao != 5)
+        {
+            Console.WriteLine("Digite (1) para pedir um Lanche");
+            Console.WriteLine("Digite (2) para pedir uma Bebida");
+            Console.WriteLine("Digite (3) para pedir uma Sobremesa");
+            Console.WriteLine("Digite (4) para ir para pagamento");
+            Console.WriteLine("Digite (5) Sair");
+
+            opcao = int.Parse(Console.ReadLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    Console.Write("Quantidade de Lanches: ");
+                    int qtdLanche = int.Parse(Console.ReadLine());
+                    total += qtdLanche * 15;
+                    Console.WriteLine("Lanche adicionado!");
+                    break;
+
+                case 2:
+                    Console.Write("Quantidade de Bebidas: ");
+                    int qtdBebida = int.Parse(Console.ReadLine());
+                    total += qtdBebida * 7;
+                    Console.WriteLine("Bebida adicionada!");
+                    break;
+
+                case 3:
+                    Console.Write("Quantidade de Sobremesas: ");
+                    int qtdSobremesa = int.Parse(Console.ReadLine());
+                    total += qtdSobremesa * 10;
+                    Console.WriteLine("Sobremesa adicionada!");
+                    break;
+
+                case 4:
+                    Console.WriteLine($"Total do pedido: R$ {total}");
+                    break;
+
+                case 5:
+                    Console.WriteLine($"Obrigado! Total gasto: R$ {total}" + " volte sempre!");
+                    break;
+
+                default:
+                    Console.WriteLine("Opção inválida!");
+                    break;
+            }
+        }
+    }
+}
