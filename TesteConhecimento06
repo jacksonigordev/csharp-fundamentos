@@ -1,0 +1,72 @@
+namespace Treinando
+
+{
+    class Program
+    {
+        public static void Main()
+        {
+
+            string produto = "";
+            int valor1 = 0;
+            
+
+        inicio:
+            Console.WriteLine("Software EngineCadastroCase");
+            Console.WriteLine("\nDigite 1 para cadastrar.");
+            Console.WriteLine("Digite 2 para listar produtos.");
+            Console.WriteLine("Digite 3 para fazer pedido.");
+            Console.WriteLine("Digite 4 para sair.");
+
+            int lista = Convert.ToInt32(Console.ReadLine());
+
+            switch (lista)
+            {
+                case 1:
+                    Console.WriteLine("\nCadastro de produto.");
+                    Console.WriteLine("Digite 1 para realizar o cadastro.");
+                    Console.WriteLine("Digite 2 para retornar ao menu principal.");
+                    int cadastro = Convert.ToInt32(Console.ReadLine());
+                    if(cadastro == 1)
+                    {
+                    inicioCadastro:
+                        Console.WriteLine("Digite o nome do Produto que deseja cadastrar: ");
+                        produto = Console.ReadLine();
+                        Console.WriteLine("Agora digite o valor em Reais: (Exemplo: 10, 20, 30, 40)");
+                        valor1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(produto + " no valor de " + valor1 + " reais foi cadastrado com sucesso."); //Leia abaixo!!!!!!!!
+                        Console.WriteLine("Aperte 0 para retornar ao menu ou aperte 1 para adicionar mais produtos."); //Opção de adicionar mais produtos não funciona pois nçao criado em <list>. Me desculpem eu AINDA não sei usar a função. Mas em breve irei aprender!!!!!!!
+                        int botao = Convert.ToInt32(Console.ReadLine());
+                        if(botao == 0)
+                        {                          
+                            goto inicio;
+                        }
+                        else if (botao == 1)
+                        {
+                            goto inicioCadastro;
+                        }
+                        
+                    }
+                    else if (cadastro == 2)
+                    {
+                        goto inicio;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Opção desconhecida.");
+                        return;
+                    }
+                    break;
+                case 2:                   
+                    Console.WriteLine("\nLista de produtos.");
+                    string listProduto = produto;                  
+                    Console.WriteLine(listProduto + " " + valor1 + " Reais.");
+                    Console.WriteLine("Aperte qualquer tecla para retornar ao menu.");
+                    Console.ReadKey(true);
+                    break;
+                case 3:
+                    break;
+
+            }
+        }
+    }
+}
