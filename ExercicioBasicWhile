@@ -1,0 +1,57 @@
+using System.Threading.Channels;
+
+namespace Exercicio02
+
+{
+    class Program
+    {
+        public static void Main()
+        {
+            Console.WriteLine("*****************************************************");
+            Console.WriteLine("********* Seja bem vindo a Garagem SharpCar *********");
+            Console.WriteLine("*****************************************************");
+            Thread.Sleep(1000);          
+
+                  List<string> carros = new List<string>();
+
+               string opcao;
+
+               do
+               {
+                   Console.WriteLine("Digite o modelo do carro a inserir em nosso estoque: ");
+                   string carro = Console.ReadLine();
+
+                   carros.Add(carro);
+                    Console.WriteLine("Carro cadastrado com sucesso.");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Você deseja acrescentar um novo modelo? (s/n)");
+                    opcao = Console.ReadLine();
+               }
+               while (opcao.ToLower() == "s");
+                Console.WriteLine("Lista de carros: ");
+
+                foreach (string carro in carros)
+                {
+                    Console.WriteLine(carro); 
+                }
+
+                Console.WriteLine("Digite um modelo a procurar.");
+                string procurar = Console.ReadLine();
+
+            bool encontrado = false;
+
+            foreach (string carro in carros)
+            { 
+                if (carro.ToLower() == procurar.ToLower())
+                {
+                    encontrado = true;
+                }
+            }
+            if(encontrado)         
+                Console.WriteLine("Modelo encontrado!");
+            else
+                Console.WriteLine("Modelo não encontrado");
+
+        }            
+    }
+}
